@@ -1,0 +1,2961 @@
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (28.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (12.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 15:29:07) [GET]
+
+ActionController::RoutingError (No route matches "/scaffold" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20101004223123)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "productname" varchar(255), "productdesc" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (10.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101004223123')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("products")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20101004223123)
+Migrating to AddVersioning (20101004223139)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: no such table: product: ALTER TABLE "product" ADD "button_version" varchar(255)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20101004223123)
+Migrating to AddVersioning (20101004223139)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (15.1ms)[0m   [0mALTER TABLE "products" ADD "button_version" varchar(255)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "products" ADD "app_version" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101004223139')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("products")[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 15:34:55) [GET]
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 106ms (View: 98, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:34:58) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 91ms (View: 85, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 15:35:16) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Hm32j+sunpQ5MGoLB5BGPSHho2IX/jjtAT+cUg5XubA=", "product"=>{"productdesc"=>"A fun torture device for everyone.", "productname"=>"thumbscrews"}}
+  [4;35;1mProduct Create (12.6ms)[0m   [0mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-04 22:35:16', 'A fun torture device for everyone.', NULL, '2010-10-04 22:35:16', NULL, 'thumbscrews')[0m
+Redirected to http://localhost:3000/products/1
+Completed in 27ms (DB: 13) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 15:35:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 34ms (View: 25, DB: 0) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 15:35:18) [GET]
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:36:19) [GET]
+Rendering template within layouts/products
+Rendering products/new
+
+ActionView::TemplateError (undefined method `hidden' for #<ActionView::Helpers::FormBuilder:0x1034fd338>) on line #5 of app/views/products/new.html.erb:
+2: 
+3: <% form_for(@product) do |f| %>
+4:   <%= f.error_messages %>
+5:   <%= f.hidden :button_version %>
+6:   <%= f.hidden :app_version %>
+7: 
+8:   <p>
+
+    app/views/products/new.html.erb:5
+    app/views/products/new.html.erb:3
+    app/controllers/products_controller.rb:29:in `new'
+
+Rendered rescues/_trace (141.4ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:36:28) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:42:49) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/application_controller.rb:13:in `toggle_version'
+
+Rendered rescues/_trace (121.2ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+/!\ FAILSAFE /!\  Mon Oct 04 15:46:23 -0700 2010
+  Status: 500 Internal Server Error
+  /Users/anna/dev/rails/markettools/app/controllers/application_controller.rb:8: syntax error, unexpected tSYMBEG, expecting kDO or '{' or '('
+  skip_before_filter :toggle_version, :except=>[:index]
+                      ^
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Mon Oct 04 15:46:45 -0700 2010
+  Status: 500 Internal Server Error
+  /Users/anna/dev/rails/markettools/app/controllers/application_controller.rb:8: syntax error, unexpected tSYMBEG, expecting kDO or '{' or '('
+  skip_before_filter :toggle_version, :except=>[:index]
+                      ^
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:50:54) [GET]
+Rendering template within layouts/products
+Rendering products/new
+ERROR: compiling _run_erb_app47views47products47new46html46erb RAISED compile error
+/Users/anna/dev/rails/markettools/app/views/products/new.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+...:value=>'$session['app_version']' ).to_s); @output_buffer.co...
+                              ^
+Function body:           def _run_erb_app47views47products47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New product</h1>\n\n"
+
+;  form_for(@product) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.hidden_field :button_version ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.hidden_field :app_version, :value=>'$session['app_version']' ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :productname ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :productname ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :productdesc ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :productdesc ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', products_path ).to_s); @output_buffer.concat "\n<hr>\n<h2>"
+
+; @output_buffer.concat((h session[:version] ).to_s); @output_buffer.concat "</h2>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/anna/dev/rails/markettools/app/views/products/new.html.erb:26:in `compile!'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/anna/dev/rails/markettools/app/controllers/products_controller.rb:31:in `new'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/anna/dev/rails/markettools/app/views/products/new.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+...:value=>'$session['app_version']' ).to_s); @output_buffer.co...
+                              ^) on line #6 of app/views/products/new.html.erb:
+3: <% form_for(@product) do |f| %>
+4:   <%= f.error_messages %>
+5:   <%= f.hidden_field :button_version %>
+6:   <%= f.hidden_field :app_version, :value=>'$session['app_version']' %>
+7: 
+8:   <p>
+9:     <%= f.label :productname %><br />
+
+    app/views/products/new.html.erb:26:in `compile!'
+    app/controllers/products_controller.rb:31:in `new'
+
+Rendered rescues/_trace (129.8ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:51:13) [GET]
+Rendering template within layouts/products
+Rendering products/new
+ERROR: compiling _run_erb_app47views47products47new46html46erb RAISED compile error
+/Users/anna/dev/rails/markettools/app/views/products/new.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+...:value=>'$session['app_version']' ).to_s); @output_buffer.co...
+                              ^
+Function body:           def _run_erb_app47views47products47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New product</h1>\n\n"
+
+;  form_for(@product) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.hidden_field :button_version ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.hidden_field :app_version, :value=>'$session['app_version']' ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :productname ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :productname ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :productdesc ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :productdesc ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', products_path ).to_s); @output_buffer.concat "\n<hr>\n<h2>"
+
+; @output_buffer.concat(( session[:version] ).to_s); @output_buffer.concat "</h2>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/anna/dev/rails/markettools/app/views/products/new.html.erb:26:in `compile!'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/anna/dev/rails/markettools/app/controllers/products_controller.rb:31:in `new'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/anna/dev/rails/markettools/app/views/products/new.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+...:value=>'$session['app_version']' ).to_s); @output_buffer.co...
+                              ^) on line #6 of app/views/products/new.html.erb:
+3: <% form_for(@product) do |f| %>
+4:   <%= f.error_messages %>
+5:   <%= f.hidden_field :button_version %>
+6:   <%= f.hidden_field :app_version, :value=>'$session['app_version']' %>
+7: 
+8:   <p>
+9:     <%= f.label :productname %><br />
+
+    app/views/products/new.html.erb:26:in `compile!'
+    app/controllers/products_controller.rb:31:in `new'
+
+Rendered rescues/_trace (53.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:51:24) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 169ms (View: 163, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:51:32) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:51:38) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:51:39) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:51:49) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 293ms (View: 285, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:51:56) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 400ms (View: 7, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:52:27) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:52:29) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:52:31) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:52:32) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:52:37) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:52:44) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:52:45) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:53:04) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:53:05) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:53:06) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 89ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:53:18) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 106ms (View: 99, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:53:39) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 81ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:53:48) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:55:19) [GET]
+
+NoMethodError (undefined method `^' for "true":String):
+  app/controllers/application_controller.rb:11:in `versioning'
+
+Rendered rescues/_trace (42.5ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 15:55:31) [GET]
+
+NoMethodError (undefined method `^' for "true":String):
+  app/controllers/application_controller.rb:11:in `versioning'
+
+Rendered rescues/_trace (127.3ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:00:46) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 103ms (View: 95, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:00:56) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 38ms (View: 31, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:04:41) [GET]
+
+NoMethodError (undefined method `^' for "true":String):
+  app/controllers/application_controller.rb:11:in `versioning'
+
+Rendered rescues/_trace (43.9ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:05:17) [GET]
+
+NoMethodError (undefined method `^' for "true":String):
+  app/controllers/application_controller.rb:11:in `versioning'
+
+Rendered rescues/_trace (41.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:10:01) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 431ms (View: 238, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:10:04) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 83ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:10:05) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:10:06) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:10:07) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:10:07) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:10:08) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:10:08) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:10:09) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:12:41) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 69ms (View: 60, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 16:12:49) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Hm32j+sunpQ5MGoLB5BGPSHho2IX/jjtAT+cUg5XubA=", "product"=>{"productdesc"=>"whats up", "button_version"=>"", "app_version"=>"", "productname"=>"helo"}}
+  [4;36;1mProduct Create (0.7ms)[0m   [0;1mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-04 23:12:50', 'whats up', '', '2010-10-04 23:12:50', '', 'helo')[0m
+Redirected to http://localhost:3000/products/2
+Completed in 98ms (DB: 1) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 16:12:50) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 2) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 31ms (View: 24, DB: 0) | 200 OK [http://localhost/products/2]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 16:12:55) [GET]
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 77ms (View: 71, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:14:25) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 39ms (View: 32, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:14:31) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 93ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:14:36) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:15:13) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 39ms (View: 32, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:15:19) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 91ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 16:15:24) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Hm32j+sunpQ5MGoLB5BGPSHho2IX/jjtAT+cUg5XubA=", "product"=>{"productdesc"=>"ola", "button_version"=>"", "app_version"=>"", "productname"=>"ola"}}
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-04 23:15:24', 'ola', '', '2010-10-04 23:15:24', '', 'ola')[0m
+Redirected to http://localhost:3000/products/3
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 16:15:24) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 3) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/products/3]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 16:15:26) [GET]
+  [4;36;1mProduct Load (0.7ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:15:28) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:15:37) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:16:24) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 47ms (View: 39, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:16:36) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 88ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:16:41) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:16:43) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:16:44) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 28ms (View: 20, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:16:45) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:16:45) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:16:46) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 16:53:07) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 61ms (View: 11, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:13:48) [GET]
+
+NameError (undefined local variable or method `version' for #<ProductsController:0x103455958>):
+  app/controllers/application_controller.rb:11:in `versioning'
+
+Rendered rescues/_trace (162.5ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:42:48) [GET]
+
+NameError (undefined local variable or method `version' for #<ProductsController:0x103711048>):
+  app/controllers/application_controller.rb:11:in `versioning'
+
+Rendered rescues/_trace (41.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+/!\ FAILSAFE /!\  Mon Oct 04 20:46:42 -0700 2010
+  Status: 500 Internal Server Error
+  /Users/anna/dev/rails/markettools/app/helpers/application_helper.rb:10: syntax error, unexpected $end, expecting kEND
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:197:in `default_helper_module!'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:212:in `__send__'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:212:in `inherited'
+    /Users/anna/dev/rails/markettools/app/controllers/application_controller.rb:4
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:47:37) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 175ms (View: 160, DB: 0) | 200 OK [http://localhost/products/new]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/anna/dev/rails/markettools/app/controllers/application_controller.rb:7)
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/anna/dev/rails/markettools/app/controllers/application_controller.rb:7)
+
+
+Processing ActionController::Base#new (for 127.0.0.1 at 2010-10-04 20:48:36) [GET]
+
+NameError (undefined local variable or method `version' for ApplicationController:Class):
+  app/controllers/application_controller.rb:7
+  app/controllers/products_controller.rb:1
+
+Rendered rescues/_trace (44.7ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/anna/dev/rails/markettools/app/controllers/application_controller.rb:7)
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/anna/dev/rails/markettools/app/controllers/application_controller.rb:7)
+
+
+Processing ActionController::Base#new (for 127.0.0.1 at 2010-10-04 20:48:42) [GET]
+
+NameError (undefined local variable or method `version' for ApplicationController:Class):
+  app/controllers/application_controller.rb:7
+  app/controllers/products_controller.rb:1
+
+Rendered rescues/_trace (43.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/anna/dev/rails/markettools/app/controllers/application_controller.rb:7)
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/anna/dev/rails/markettools/app/controllers/application_controller.rb:7)
+
+
+Processing ActionController::Base#new (for 127.0.0.1 at 2010-10-04 20:48:44) [GET]
+
+NameError (undefined local variable or method `version' for ApplicationController:Class):
+  app/controllers/application_controller.rb:7
+  app/controllers/products_controller.rb:1
+
+Rendered rescues/_trace (127.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:48:50) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:48:57) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:50:36) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 42ms (View: 36, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:50:53) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 82ms (View: 76, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:51:38) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:51:48) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:51:49) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:51:50) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:51:51) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:51:55) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:51:56) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:51:57) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 20:51:58) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:07:11) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]=):
+  app/controllers/application_controller.rb:17:in `manage_version'
+
+Rendered rescues/_trace (43.1ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:07:35) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]=):
+  app/controllers/application_controller.rb:17:in `manage_version'
+
+Rendered rescues/_trace (118.3ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:08:18) [GET]
+Rendering template within layouts/products
+Rendering products/new
+
+ActionView::TemplateError (undefined local variable or method `version' for #<ActionView::Base:0x103754b68>) on line #23 of app/views/products/new.html.erb:
+20: 
+21: <%= link_to 'Back', products_path %>
+22: <hr>
+23: **<h2><%= version.to_s %></h2>**
+
+    app/views/products/new.html.erb:23
+    app/controllers/products_controller.rb:31:in `new'
+
+Rendered rescues/_trace (53.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:08:27) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 105ms (View: 99, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:08:39) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 38ms (View: 32, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:08:43) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 87ms (View: 81, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:09:01) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:09:25) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:09:26) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:10:19) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]=):
+  app/controllers/application_controller.rb:19:in `manage_version'
+
+Rendered rescues/_trace (120.4ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:10:41) [GET]
+
+NoMethodError (undefined method `to_i' for false:FalseClass):
+  app/controllers/application_controller.rb:19:in `manage_version'
+
+Rendered rescues/_trace (41.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:11:19) [GET]
+
+NoMethodError (undefined method `to_num' for false:FalseClass):
+  app/controllers/application_controller.rb:19:in `manage_version'
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:13:34) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]=):
+  app/controllers/application_controller.rb:19:in `manage_version'
+
+Rendered rescues/_trace (130.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:14:24) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]=):
+  app/controllers/application_controller.rb:19:in `manage_version'
+
+Rendered rescues/_trace (119.3ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 21:17:59) [GET]
+
+ActionController::RoutingError (No route matches "/flights/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:18:02) [GET]
+
+TypeError (can't convert false into Integer):
+  app/controllers/application_controller.rb:16:in `[]'
+  app/controllers/application_controller.rb:16:in `manage_version'
+
+Rendered rescues/_trace (125.3ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:18:59) [GET]
+
+NoMethodError (undefined method `to_i' for false:FalseClass):
+  app/controllers/application_controller.rb:16:in `manage_version'
+
+Rendered rescues/_trace (42.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:19:05) [GET]
+
+NoMethodError (undefined method `to_int' for false:FalseClass):
+  app/controllers/application_controller.rb:16:in `manage_version'
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActionController::Base#new (for 127.0.0.1 at 2010-10-04 21:19:49) [GET]
+
+NameError (undefined local variable or method `last_version' for ApplicationController:Class):
+  app/controllers/application_controller.rb:9
+  app/controllers/products_controller.rb:1
+
+Rendered rescues/_trace (42.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+/!\ FAILSAFE /!\  Mon Oct 04 21:20:18 -0700 2010
+  Status: 500 Internal Server Error
+  /Users/anna/dev/rails/markettools/app/controllers/application_controller.rb:20: invalid regular expression; there's no previous pattern, to which '*' would define cardinality at 1: /*    if !$last_version
+      $last_version_idx = 0
+    end
+    this_version = !$last_version_idx  #do the toggle
+    session[:app_version] = version_array[this_version.to_int]
+    puts "this version: " + session[:app_version]
+  */
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Mon Oct 04 21:20:19 -0700 2010
+  Status: 500 Internal Server Error
+  /Users/anna/dev/rails/markettools/app/controllers/application_controller.rb:20: invalid regular expression; there's no previous pattern, to which '*' would define cardinality at 1: /*    if !$last_version
+      $last_version_idx = 0
+    end
+    this_version = !$last_version_idx  #do the toggle
+    session[:app_version] = version_array[this_version.to_int]
+    puts "this version: " + session[:app_version]
+  */
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Mon Oct 04 21:20:51 -0700 2010
+  Status: 500 Internal Server Error
+  /Users/anna/dev/rails/markettools/app/controllers/application_controller.rb:20: invalid regular expression; there's no previous pattern, to which '*' would define cardinality at 1: /*    if !$last_version
+      $last_version_idx = 0
+    end
+    this_version = !$last_version_idx  #do the toggle
+    session[:app_version] = version_array[this_version.to_int]
+    puts "this version: " + session[:app_version]
+  */
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:21:15) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 39ms (View: 33, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:21:48) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:23:25) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:23:27) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 58ms (View: 8, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:23:37) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:26:07) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 22ms (View: 15, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:26:30) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:27:09) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:27:11) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:27:12) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:27:48) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 21:27:48) [GET]
+  Parameters: {"id"=>"red"}
+  [4;36;1mProduct Load (20.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Product with ID=red):
+  app/controllers/products_controller.rb:16:in `show'
+
+Rendered rescues/_trace (41.6ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:28:07) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:28:08) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:28:23) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:28:25) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:29:21) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:29:24) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:29:25) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:29:26) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:29:27) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:29:27) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:29:28) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:29:28) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:29:29) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:29:30) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:29:31) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:29:31) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:30:12) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:30:13) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:30:19) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 90ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:30:32) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 115ms (View: 109, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:32:08) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:35:24) [GET]
+Rendering template within layouts/products
+Rendering products/new
+ERROR: compiling _run_erb_app47views47products47new46html46erb RAISED compile error
+/Users/anna/dev/rails/markettools/app/views/products/new.html.erb:25: syntax error, unexpected ';', expecting ']'
+...y[session[:sess_version_idx] ; @output_buffer.concat "\n\n"
+                              ^
+Function body:           def _run_erb_app47views47products47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New product</h1>\n\n"
+
+;  form_for(@product) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.hidden_field :button_version ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.hidden_field :app_version ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :productname ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :productname ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :productdesc ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :productdesc ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n<!-- example of in-line version toggling -->\n\n"
+
+
+
+;  button_array = ['button1.png', 'button2.png'] ; @output_buffer.concat "\n\n"
+
+;  image_button_submit, button_array[session[:sess_version_idx] ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', products_path ).to_s); @output_buffer.concat "\n<hr>\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/anna/dev/rails/markettools/app/views/products/new.html.erb:32:in `compile!'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/anna/dev/rails/markettools/app/controllers/products_controller.rb:31:in `new'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/anna/dev/rails/markettools/app/views/products/new.html.erb:25: syntax error, unexpected ';', expecting ']'
+...y[session[:sess_version_idx] ; @output_buffer.concat "\n\n"
+                              ^) on line #25 of app/views/products/new.html.erb:
+22: 
+23: <% button_array = ['button1.png', 'button2.png'] %>
+24: 
+25: <% image_button_submit, button_array[session[:sess_version_idx] %>
+26: 
+27: <%= link_to 'Back', products_path %>
+28: <hr>
+
+    app/views/products/new.html.erb:32:in `compile!'
+    app/controllers/products_controller.rb:31:in `new'
+
+Rendered rescues/_trace (50.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:39:10) [GET]
+Rendering template within layouts/products
+Rendering products/new
+ERROR: compiling _run_erb_app47views47products47new46html46erb RAISED compile error
+/Users/anna/dev/rails/markettools/app/views/products/new.html.erb:18: syntax error, unexpected ')', expecting ']'
+...y[session[:sess_version_idx] ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47products47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New product</h1>\n\n"
+
+;  form_for(@product) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.hidden_field :button_version ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.hidden_field :app_version ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :productname ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :productname ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :productdesc ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :productdesc ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n"
+
+
+;  button_array = ['/public/images/freeze_it.gif', '/public/images/get_started.gif'] ; @output_buffer.concat "\n "
+; @output_buffer.concat(( image_submit_tag button_array[session[:sess_version_idx] ).to_s); @output_buffer.concat "   \n "
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n<!-- example of in-line version toggling -->\n\n\n"
+
+
+
+
+; @output_buffer.concat(( link_to 'Back', products_path ).to_s); @output_buffer.concat "\n<hr>\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/anna/dev/rails/markettools/app/views/products/new.html.erb:31:in `compile!'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/anna/dev/rails/markettools/app/controllers/products_controller.rb:31:in `new'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/anna/dev/rails/markettools/app/views/products/new.html.erb:18: syntax error, unexpected ')', expecting ']'
+...y[session[:sess_version_idx] ).to_s); @output_buffer.concat ...
+                              ^) on line #18 of app/views/products/new.html.erb:
+15:   </p>
+16:   <p>
+17: <% button_array = ['/public/images/freeze_it.gif', '/public/images/get_started.gif'] %>
+18:  <%= image_submit_tag button_array[session[:sess_version_idx] %>   
+19:  <%= f.submit 'Create' %>
+20:   </p>
+21: <% end %>
+
+    app/views/products/new.html.erb:31:in `compile!'
+    app/controllers/products_controller.rb:31:in `new'
+
+Rendered rescues/_trace (51.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:40:11) [GET]
+Rendering template within layouts/products
+Rendering products/new
+ERROR: compiling _run_erb_app47views47products47new46html46erb RAISED compile error
+/Users/anna/dev/rails/markettools/app/views/products/new.html.erb:18: syntax error, unexpected ')', expecting ']'
+...y[session[:sess_version_idx] ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47products47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New product</h1>\n\n"
+
+;  form_for(@product) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.hidden_field :button_version ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.hidden_field :app_version ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :productname ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :productname ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :productdesc ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :productdesc ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n"
+
+
+; @output_buffer.concat(( button_array = ['/public/images/freeze_it.gif', '/public/images/get_started.gif'] ).to_s); @output_buffer.concat "\n "
+; @output_buffer.concat(( image_submit_tag button_array[session[:sess_version_idx] ).to_s); @output_buffer.concat "   \n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n<!-- example of in-line version toggling -->\n\n\n"
+
+
+
+
+; @output_buffer.concat(( link_to 'Back', products_path ).to_s); @output_buffer.concat "\n<hr>\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/anna/dev/rails/markettools/app/views/products/new.html.erb:30:in `compile!'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/anna/dev/rails/markettools/app/controllers/products_controller.rb:31:in `new'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/anna/dev/rails/markettools/app/views/products/new.html.erb:18: syntax error, unexpected ')', expecting ']'
+...y[session[:sess_version_idx] ).to_s); @output_buffer.concat ...
+                              ^) on line #18 of app/views/products/new.html.erb:
+15:   </p>
+16:   <p>
+17: <%= button_array = ['/public/images/freeze_it.gif', '/public/images/get_started.gif'] %>
+18:  <%= image_submit_tag button_array[session[:sess_version_idx] %>   
+19:   </p>
+20: <% end %>
+21: 
+
+    app/views/products/new.html.erb:30:in `compile!'
+    app/controllers/products_controller.rb:31:in `new'
+
+Rendered rescues/_trace (140.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:41:56) [GET]
+Rendering template within layouts/products
+Rendering products/new
+
+ActionView::TemplateError (no implicit conversion from nil to integer) on line #18 of app/views/products/new.html.erb:
+15:   </p>
+16:   <p>
+17: <%= button_array = ['/public/images/freeze_it.gif', '/public/images/get_started.gif'] %>
+18:  <%= image_submit_tag button_array[session[:sess_version_idx]] %>   
+19:   </p>
+20: <% end %>
+21: 
+
+    app/views/products/new.html.erb:18:in `[]'
+    app/views/products/new.html.erb:18
+    app/views/products/new.html.erb:3
+    app/controllers/products_controller.rb:31:in `new'
+
+Rendered rescues/_trace (53.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:42:27) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 54ms (View: 49, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 21:42:28) [GET]
+
+ActionController::RoutingError (No route matches "/public/images/freeze_it.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:42:56) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 21:43:00) [POST]
+  Parameters: {"x"=>"112", "y"=>"21", "authenticity_token"=>"Fm2iXiVVl3zr2/XF1dMjysR6vTJ/iCVxtwSqjaDGI8M=", "product"=>{"productdesc"=>"", "button_version"=>"", "app_version"=>"", "productname"=>""}}
+  [4;35;1mProduct Create (10.3ms)[0m   [0mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-05 04:43:00', '', '', '2010-10-05 04:43:00', '', '')[0m
+Redirected to http://localhost:3000/products/4
+Completed in 49ms (DB: 10) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 21:43:00) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 4) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/products/4]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:43:40) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:44:30) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 28ms (View: 22, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:44:36) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:44:40) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 91ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:45:36) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 44ms (View: 37, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:45:49) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:45:52) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:45:59) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:46:00) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:46:45) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:46:46) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 21:46:47) [POST]
+  Parameters: {"x"=>"157", "y"=>"28", "authenticity_token"=>"ewTsfLp/js7kSBvIF051VVsgSTc+smeWs2WxYqWo/v8=", "product"=>{"productdesc"=>"", "button_version"=>"", "app_version"=>"", "productname"=>""}}
+  [4;35;1mProduct Create (12.5ms)[0m   [0mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-05 04:46:47', '', '', '2010-10-05 04:46:47', '', '')[0m
+Redirected to http://localhost:3000/products/5
+Completed in 25ms (DB: 12) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 21:46:47) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 5) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/products/5]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 21:46:49) [GET]
+  [4;35;1mProduct Load (0.8ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 56ms (View: 50, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:46:52) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:48:10) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:48:18) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:48:51) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:49:38) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:50:18) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:50:25) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:50:33) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:50:50) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:51:15) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:51:41) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:51:43) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:51:45) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:51:48) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 93ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:51:49) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:51:51) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:51:56) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 219ms (View: 204, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:52:38) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:52:39) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:52:54) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 21:52:57) [POST]
+  Parameters: {"x"=>"155", "y"=>"38", "authenticity_token"=>"ewTsfLp/js7kSBvIF051VVsgSTc+smeWs2WxYqWo/v8=", "product"=>{"productdesc"=>"", "button_version"=>"", "app_version"=>"", "productname"=>""}}
+  [4;36;1mProduct Create (20.8ms)[0m   [0;1mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-05 04:52:57', '', '', '2010-10-05 04:52:57', '', '')[0m
+Redirected to http://localhost:3000/products/6
+Completed in 34ms (DB: 21) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 21:52:57) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 6) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 93ms (View: 87, DB: 0) | 200 OK [http://localhost/products/6]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 21:53:01) [GET]
+  [4;36;1mProduct Load (0.9ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 29ms (View: 23, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:53:04) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:54:21) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 21:54:25) [POST]
+  Parameters: {"x"=>"153", "y"=>"36", "authenticity_token"=>"Fm2iXiVVl3zr2/XF1dMjysR6vTJ/iCVxtwSqjaDGI8M=", "product"=>{"productdesc"=>"", "button_version"=>"", "app_version"=>"", "productname"=>""}}
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-05 04:54:25', '', '', '2010-10-05 04:54:25', '', '')[0m
+Redirected to http://localhost:3000/products/7
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 21:54:25) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 7) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/products/7]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 21:54:27) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 31ms (View: 25, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 21:54:28) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 115ms (View: 109, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:54:30) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:54:31) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:54:36) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:54:36) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:55:00) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:55:33) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:55:43) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:55:58) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:56:36) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 21:56:40) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 32ms (View: 25, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:56:42) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:58:11) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 30ms (View: 25, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:58:13) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 21:58:14) [POST]
+  Parameters: {"x"=>"104", "y"=>"37", "authenticity_token"=>"wVccxbkGBaFXFrV5mMcmMXazmPJa8gA8aZuzD1bp9JQ=", "product"=>{"productdesc"=>"", "button_version"=>"get_started.gif", "app_version"=>"red", "productname"=>""}}
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-05 04:58:14', '', 'get_started.gif', '2010-10-05 04:58:14', 'red', '')[0m
+Redirected to http://localhost:3000/products/8
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 21:58:14) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 8) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 90ms (View: 4, DB: 0) | 200 OK [http://localhost/products/8]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 21:58:16) [GET]
+  [4;36;1mProduct Load (1.1ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 35ms (View: 28, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 21:59:21) [GET]
+  [4;35;1mProduct Load (1.1ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 39ms (View: 33, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:59:31) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 21:59:33) [POST]
+  Parameters: {"x"=>"168", "y"=>"35", "authenticity_token"=>"wVccxbkGBaFXFrV5mMcmMXazmPJa8gA8aZuzD1bp9JQ=", "product"=>{"productdesc"=>"", "button_version"=>"get_started.gif", "app_version"=>"red", "productname"=>""}}
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-05 04:59:33', '', 'get_started.gif', '2010-10-05 04:59:33', 'red', '')[0m
+Redirected to http://localhost:3000/products/9
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 21:59:33) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 9) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/products/9]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 21:59:35) [GET]
+  [4;36;1mProduct Load (1.1ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 120ms (View: 114, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:59:42) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 21:59:49) [POST]
+  Parameters: {"x"=>"99", "y"=>"44", "authenticity_token"=>"Fm2iXiVVl3zr2/XF1dMjysR6vTJ/iCVxtwSqjaDGI8M=", "product"=>{"productdesc"=>"", "button_version"=>"", "app_version"=>"", "productname"=>""}}
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-05 04:59:49', '', '', '2010-10-05 04:59:49', '', '')[0m
+Redirected to http://localhost:3000/products/10
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 21:59:49) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 10) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/products/10]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 21:59:51) [GET]
+  [4;35;1mProduct Load (1.3ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 39ms (View: 33, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 21:59:55) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 22:00:00) [POST]
+  Parameters: {"x"=>"112", "y"=>"32", "authenticity_token"=>"Fm2iXiVVl3zr2/XF1dMjysR6vTJ/iCVxtwSqjaDGI8M=", "product"=>{"productdesc"=>"blue", "button_version"=>"freeze_it.gif", "app_version"=>"blue", "productname"=>"test 1"}}
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-05 05:00:00', 'blue', 'freeze_it.gif', '2010-10-05 05:00:00', 'blue', 'test 1')[0m
+Redirected to http://localhost:3000/products/11
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 22:00:00) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 11) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/products/11]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:00:02) [GET]
+  [4;36;1mProduct Load (1.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 122ms (View: 116, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:06:26) [GET]
+  [4;35;1mProduct Load (1.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 45ms (View: 37, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:06:27) [GET]
+  [4;36;1mProduct Load (1.3ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 46ms (View: 40, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 22:06:29) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 22:06:32) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 22:06:33) [POST]
+  Parameters: {"x"=>"76", "y"=>"66", "authenticity_token"=>"Fm2iXiVVl3zr2/XF1dMjysR6vTJ/iCVxtwSqjaDGI8M=", "product"=>{"productdesc"=>"", "button_version"=>"buyme.png", "app_version"=>"blue", "productname"=>""}}
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-05 05:06:33', '', 'buyme.png', '2010-10-05 05:06:33', 'blue', '')[0m
+Redirected to http://localhost:3000/products/12
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 22:06:33) [GET]
+  Parameters: {"id"=>"12"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 12) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/products/12]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:06:35) [GET]
+  [4;35;1mProduct Load (1.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 48ms (View: 41, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:06:37) [GET]
+  [4;36;1mProduct Load (1.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 51ms (View: 44, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 22:06:42) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:07:56) [GET]
+  [4;35;1mProduct Load (1.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 46ms (View: 39, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:09:04) [GET]
+  [4;36;1mProduct Load (1.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 73ms (View: 66, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:09:06) [GET]
+  [4;35;1mProduct Load (1.8ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 51ms (View: 42, DB: 2) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:09:26) [GET]
+  [4;36;1mProduct Load (1.6ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 227ms (View: 217, DB: 2) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:09:43) [GET]
+  [4;35;1mProduct Load (1.6ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 56ms (View: 48, DB: 2) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:09:44) [GET]
+  [4;36;1mProduct Load (1.9ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 57ms (View: 49, DB: 2) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 22:09:46) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 22:09:48) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 22:09:49) [POST]
+  Parameters: {"x"=>"77", "y"=>"64", "authenticity_token"=>"Fm2iXiVVl3zr2/XF1dMjysR6vTJ/iCVxtwSqjaDGI8M=", "product"=>{"productdesc"=>"", "button_version"=>"buyme.png", "app_version"=>"blue", "productname"=>""}}
+  [4;35;1mProduct Create (0.9ms)[0m   [0mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-05 05:09:49', '', 'buyme.png', '2010-10-05 05:09:49', 'blue', '')[0m
+Redirected to http://localhost:3000/products/13
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 22:09:49) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 13) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 113ms (View: 105, DB: 0) | 200 OK [http://localhost/products/13]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:11:31) [GET]
+  [4;35;1mProduct Load (21.3ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 105ms (View: 78, DB: 21) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 22:11:34) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 22:11:36) [POST]
+  Parameters: {"x"=>"102", "y"=>"32", "authenticity_token"=>"Fm2iXiVVl3zr2/XF1dMjysR6vTJ/iCVxtwSqjaDGI8M=", "product"=>{"productdesc"=>"", "button_version"=>"buyme.png", "app_version"=>"blue", "productname"=>""}}
+  [4;36;1mProduct Create (29.7ms)[0m   [0;1mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-05 05:11:36', '', 'buyme.png', '2010-10-05 05:11:36', 'blue', '')[0m
+Redirected to http://localhost:3000/products/14
+Completed in 43ms (DB: 30) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 22:11:36) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 14) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/products/14]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:11:38) [GET]
+  [4;36;1mProduct Load (1.6ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 55ms (View: 48, DB: 2) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 22:12:07) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 102ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 22:13:16) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 99ms (View: 32, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 22:13:48) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 93ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 22:13:52) [POST]
+  Parameters: {"x"=>"85", "y"=>"27", "authenticity_token"=>"9152pgund5rguQGSnZ9436nuBchxhwF4UhJ21qGYlPY=", "product"=>{"productdesc"=>"", "button_version"=>"purchase.png", "app_version"=>"maroon", "productname"=>""}}
+  [4;36;1mProduct Create (0.6ms)[0m   [0;1mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-05 05:13:52', '', 'purchase.png', '2010-10-05 05:13:52', 'maroon', '')[0m
+Redirected to http://localhost:3000/products/15
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 22:13:53) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 15) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/products/15]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 22:14:37) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 15) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/products/15]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:14:39) [GET]
+  [4;35;1mProduct Load (2.3ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 65ms (View: 57, DB: 2) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:14:51) [GET]
+  [4;36;1mProduct Load (1.7ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 142ms (View: 132, DB: 2) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:15:01) [GET]
+  [4;35;1mProduct Load (1.7ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 59ms (View: 52, DB: 2) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 22:15:04) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 22:15:06) [POST]
+  Parameters: {"x"=>"59", "y"=>"20", "authenticity_token"=>"9152pgund5rguQGSnZ9436nuBchxhwF4UhJ21qGYlPY=", "product"=>{"productdesc"=>"", "button_version"=>"purchase.png", "app_version"=>"maroon", "productname"=>""}}
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-05 05:15:06', '', 'purchase.png', '2010-10-05 05:15:06', 'maroon', '')[0m
+Redirected to http://localhost:3000/products/16
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 22:15:06) [GET]
+  Parameters: {"id"=>"16"}
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 16) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/products/16]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-10-04 22:15:19) [GET]
+  [4;36;1mProduct Load (1.7ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 62ms (View: 55, DB: 2) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 22:15:21) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 102ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 22:16:12) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 22:16:18) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 22:16:21) [POST]
+  Parameters: {"x"=>"89", "y"=>"35", "authenticity_token"=>"9152pgund5rguQGSnZ9436nuBchxhwF4UhJ21qGYlPY=", "product"=>{"productdesc"=>"", "button_version"=>"purchase.png", "app_version"=>"maroon", "productname"=>""}}
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-05 05:16:21', '', 'purchase.png', '2010-10-05 05:16:21', 'maroon', '')[0m
+Redirected to http://localhost:3000/products/17
+Completed in 94ms (DB: 0) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 22:16:21) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 17) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/products/17]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-10-04 22:16:28) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-10-04 22:16:30) [POST]
+  Parameters: {"x"=>"43", "y"=>"26", "authenticity_token"=>"QwiIfLkaq+RebjsdE9sDiGuEYIgXp9UqZ0k+Pv7+I9Q=", "product"=>{"productdesc"=>"", "button_version"=>"buyme.png", "app_version"=>"navy", "productname"=>""}}
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("created_at", "productdesc", "button_version", "updated_at", "app_version", "productname") VALUES('2010-10-05 05:16:30', '', 'buyme.png', '2010-10-05 05:16:30', 'navy', '')[0m
+Redirected to http://localhost:3000/products/18
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-10-04 22:16:30) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 18) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/products/18]

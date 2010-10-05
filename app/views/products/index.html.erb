@@ -1,0 +1,26 @@
+<h1>Listing products</h1>
+
+<table>
+  <tr>
+    <th>Productname</th>
+    <th>Productdesc</th>
+    <th>button version</th>
+    <th>app version</th>
+  </tr>
+
+<% @products.each do |product| %>
+  <tr>
+    <td><%=h product.productname %></td>
+    <td><%=h product.productdesc %></td>
+    <td><%=h product.button_version %></td>
+    <td><%=h product.app_version %></td>    
+    <td><%= link_to 'Show', product %></td>
+    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New product', new_product_path %>
